@@ -73,11 +73,15 @@
 
   <!--<joint name="${prefix}camera_to_hardware" type="fixed">-->
   <joint name="camera_to_hardware" type="fixed">
-    <!--<parent link="${prefix}connecting_hardware"/>-->
     <parent link="connecting_hardware"/>
-    <!--<child link="${prefix}camera"/>-->
     <child link="${prefix}camera"/>
     <origin xyz=".5 0 .9" rpy="0 0 0"/>
+  </joint>
+
+  <joint name="camera_to_hardware" type="fixed">
+    <parent link="connecting_hardware"/>
+    <child link="${prefix}camera"/>
+    <origin xyz="0 0.25 .9" rpy="0 0 0"/>
   </joint>
 
 </robot>
